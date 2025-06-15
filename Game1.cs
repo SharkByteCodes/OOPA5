@@ -12,8 +12,22 @@ public class Game1 : Game
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
+        
+        // Custom Options
+        Window.Title = "Space Saver: Lagrange Point 4"; 
+        // Trivia: Largange Point 4 is a real point in space where gravity is mostly stable.
+        // Some scientists believe it would be a suitable spot for a research station or "another Earth".
+        
+        
+        // resize window
+        _graphics.PreferredBackBufferWidth = 800;
+        _graphics.PreferredBackBufferHeight = 800;
+        _graphics.ApplyChanges();
+        
+        
+        
         Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+        IsMouseVisible = false;
     }
 
     protected override void Initialize()
