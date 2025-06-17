@@ -2,7 +2,7 @@
  * Adopted starSprite from GoblinDanceParty project
  * This is purely to add aesthetic and I don't believe adds to the graded material?
  */
-/*using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -46,4 +46,4 @@ public class Star
     //getters to keep Game1 cleaner (hopefully)
     public float GetStarScale() {return _starScale;}
     public float GetStarRotation() {return _starRotation;}
-}*/
+}

@@ -22,6 +22,6 @@ internal class Player : Game1  // Inherits boilerplate from the Game1 class (mak
 
         // Sets the mouse cursor to scope / receptacle for targeting
         //_mouseScope = Content.Load<Texture2D>("img/player/fireReceptacle"); // tried, but I'm missing something here..
-        Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("img/player/fireReceptacle"), 0, 0));
+
     }
 }

@@ -24,11 +24,11 @@ public class Game1 : Game
 
     private Random _rng;
     private Texture2D _starRound;
-        //private Star _star;
-    private Texture2D _star;
+    private Star _star;
+    //private Texture2D _star;
     
     // init player / receptacle
-    Player _player;
+    //Player _player;
     
     public Game1()
     {
@@ -58,8 +58,8 @@ public class Game1 : Game
         // TODO: Add your initialization logic here
         
                 
-        _player = new Player();
-        //_star = new Star(_starRound); 
+        //_player = new Player();
+        _star = new Star(_starRound); 
         
         
         base.Initialize();
@@ -69,10 +69,10 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        _starRound = Content.Load<Texture2D>("meteor_small");
-        //_star = new Star(Content.Load<Texture2D>("meteor_small"));
-        _player = new Player();
-        
+        //_starRound = Content.Load<Texture2D>("meteor_small");
+        _star = new Star(Content.Load<Texture2D>("meteor_small"));
+        //_player = new Player();
+        Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("img/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
     }
 
@@ -92,10 +92,10 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.Black);
 
         
-        //_star.Draw(_spriteBatch);
-        _spriteBatch.Begin();
-        _spriteBatch.Draw(_starRound, new Vector2(100, 100), Color.White);
-        _spriteBatch.End();
+        _star.Draw(_spriteBatch);
+        //_spriteBatch.Begin();
+        //_spriteBatch.Draw(_starRound, new Vector2(100, 100), Color.White);
+        //_spriteBatch.End();
         
         // TODO: Add your drawing code here
 
