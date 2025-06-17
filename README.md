@@ -3,12 +3,13 @@
 This final project for the course needs an emphasis on:
 
 - [ ] Objects
-* - [ ] Multiple Unique and properly implimented classes
-- [ ] Use of inerhitance & polymorphism
-- [ ] Good use of collectins, lists, or arrays
-- [ ] Good use of MonoGame, Unity or GMS2 (is the game/experience/prototype working effectively in chosen engine
+* - [ ] Multiple Unique and properly implemented classes
+- [ ] Use of inheritance & polymorphism
+- [ ] Good use of collections, lists, or arrays
+  - 1st list is stars for background
+- [ ] Good use of MonoGame, ~~Unity or GMS2~~ (is the game/experience/prototype working effectively in chosen engine
 - [ ] Game/experience/prototype designed with some thought and is interesting
-- [ ] Effective use of VCS tools (GitHub)
+- [ ] Effective use of VCS tools (GitHub) ~~/ (Unity Version Control)~~
 - [ ] *Bonus (ungraded but would be a cool idea) is use of object pooling.
 
 
@@ -34,9 +35,12 @@ basic layout of classes (subject to change):
 - Ammo.cs: this defines all the different types of ammo (No less than 2 as proof of concept)
 there should be 2 classes of ammo with a unique name
 - Station.cs: this will be the object the player defends
-- Ememy.cs: parent class of enemies
+- Enemy.cs: parent class of enemies
 - Meteor.cs: subclass of Enemy
 - Monster.cs subclass of Enemy
 - BaddieShip.cs: subclass of Enemy. As the name implies, foreign/hostile ships on collision course
+- Environment.cs: should be the basis of forming the game's bounding box,
+  - Stars.cs could be a subclass, as stars are part of the environment
+
 
 More to follow

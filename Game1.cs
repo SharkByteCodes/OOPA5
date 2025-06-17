@@ -1,14 +1,35 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
+/* Object-Oriented programming Assingment 5
+ * The Final Boss Battle
+ * 
+ *
+ * AI Declaration: No AI was used in development
+ */
+
 
 namespace OOPA5;
 
 public class Game1 : Game
 {
+    //defaults
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    private int _numStars;
+
+    private Random _rng;
+    private Texture2D _starRound;
+        //private Star _star;
+    private Texture2D _star;
+    
+    // init player / receptacle
+    Player _player;
+    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -16,7 +37,7 @@ public class Game1 : Game
         // Custom Options
         Window.Title = "Space Saver: Lagrange Point 4"; 
         // Trivia: Largange Point 4 is a real point in space where gravity is mostly stable.
-        // Some scientists believe it would be a suitable spot for a research station or "another Earth".
+        // Some scientists believe it would be a suitable spot for a research station or satellite.
         
         
         // resize window
@@ -27,20 +48,31 @@ public class Game1 : Game
         
         
         Content.RootDirectory = "Content";
-        IsMouseVisible = false;
+        IsMouseVisible = true;
+        
+        
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-
+        
+                
+        _player = new Player();
+        //_star = new Star(_starRound); 
+        
+        
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+        
+        _starRound = Content.Load<Texture2D>("meteor_small");
+        //_star = new Star(Content.Load<Texture2D>("meteor_small"));
+        _player = new Player();
+        
         // TODO: use this.Content to load your game content here
     }
 
@@ -57,8 +89,14 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
 
+        
+        //_star.Draw(_spriteBatch);
+        _spriteBatch.Begin();
+        _spriteBatch.Draw(_starRound, new Vector2(100, 100), Color.White);
+        _spriteBatch.End();
+        
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);
