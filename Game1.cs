@@ -70,9 +70,9 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         //_starRound = Content.Load<Texture2D>("meteor_small");
-        _star = new Star(Content.Load<Texture2D>("meteor_small"));
+        _star = new Star(Content.Load<Texture2D>("sprites/stars/starRound"));
         //_player = new Player();
-        Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("img/player/fireReceptacle"), 0, 0));
+        Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("sprites/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
     }
 
