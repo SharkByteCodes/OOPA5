@@ -59,8 +59,8 @@ public class Game1 : Game
         
                 
         //_player = new Player();
-        _star = new Star(_starRound); 
-        
+        //_star = new Star(_starRound); 
+        //_star.Initialize();
         
         base.Initialize();
     }
@@ -70,7 +70,8 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         //_starRound = Content.Load<Texture2D>("meteor_small");
-        _star = new Star(Content.Load<Texture2D>("sprites/stars/starRound"));
+        _starRound = Content.Load<Texture2D>("sprites/stars/starRound");
+        //_star = new Star(Content.Load<Texture2D>("sprites/stars/starRound"));
         //_player = new Player();
         Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("sprites/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
@@ -92,10 +93,10 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.Black);
 
         
+        
+        _spriteBatch.Begin();
         _star.Draw(_spriteBatch);
-        //_spriteBatch.Begin();
-        //_spriteBatch.Draw(_starRound, new Vector2(100, 100), Color.White);
-        //_spriteBatch.End();
+        _spriteBatch.End();
         
         // TODO: Add your drawing code here
 
