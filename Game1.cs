@@ -59,7 +59,7 @@ public class Game1 : Game
         
                 
         //_player = new Player();
-        //_star = new Star(_starRound); 
+        _star = new Star(); 
         //_star.Initialize();
         
         base.Initialize();
@@ -92,11 +92,11 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.Black);
 
-        
-        
-        _spriteBatch.Begin();
         _star.Draw(_spriteBatch);
-        _spriteBatch.End();
+        
+        //_spriteBatch.Begin();
+        
+        //_spriteBatch.End();
         
         // TODO: Add your drawing code here
 
