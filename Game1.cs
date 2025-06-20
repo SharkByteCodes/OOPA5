@@ -19,17 +19,16 @@ public class Game1 : Game
     //defaults
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-
-    private int _numStars;
+    
 
     private Random _rng;
-    private Texture2D _starRound;
+    public Texture2D _starRound;
     private Star _star;
     //private Texture2D _star;
-    
+
+
     // init player / receptacle
     //Player _player;
-    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -56,11 +55,10 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        
+
                 
         //_player = new Player();
-        _star = new Star(); 
-        //_star.Initialize();
+        
         
         base.Initialize();
     }
@@ -69,14 +67,15 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        //_starRound = Content.Load<Texture2D>("meteor_small");
+       
+        
         _starRound = Content.Load<Texture2D>("sprites/stars/starRound");
-        //_star = new Star(Content.Load<Texture2D>("sprites/stars/starRound"));
+        _star = new Star(_starRound);
         //_player = new Player();
         Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("sprites/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
     }
-
+    
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
@@ -85,6 +84,8 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
+        
+        
         base.Update(gameTime);
     }
 
@@ -92,12 +93,9 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.Black);
 
+        
+        Console.WriteLine("Stars Count: " + _star.GetNumbStars()); // debug info
         _star.Draw(_spriteBatch);
-        
-        //_spriteBatch.Begin();
-        
-        //_spriteBatch.End();
-        
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);

@@ -2,14 +2,14 @@
 
 This final project for the course needs an emphasis on:
 
-- [ ] Objects
+- [x] Objects (currently only many objects are stars)
 * - [ ] Multiple Unique and properly implemented classes
 - [ ] Use of inheritance & polymorphism
-- [ ] Good use of collections, lists, or arrays
-  - 1st list is stars for background
+- [x] Good use of collections, lists, or arrays (currently only lists for background stars)
 - [ ] Good use of MonoGame, ~~Unity or GMS2~~ (is the game/experience/prototype working effectively in chosen engine
 - [ ] Game/experience/prototype designed with some thought and is interesting
-- [ ] Effective use of VCS tools (GitHub) ~~/ (Unity Version Control)~~
+- [x] Effective use of VCS tools (GitHub) ~~/ (Unity Version Control)~~
+- I hope so.
 - [ ] *Bonus (ungraded but would be a cool idea) is use of object pooling.
 
 
