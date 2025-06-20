@@ -10,16 +10,19 @@ namespace OOPA5;
 public class Enemy
 {
     private Vector2 _position;
-    private int _enemyX;
-    private int _enemyY;
+    private Texture2D _texture;
     
     private Random _rng;
     
     
-    public Enemy() //not number 1
+    public Enemy() //not number 1. (non-arg constructor)
     {
         _rng = new Random();
-        _enemyX = _rng.Next(25, 750);
-        _enemyY = _rng.Next(25, 750);
+        _position = new Vector2(_rng.Next(25,750),_rng.Next(25,750));  //set a random position
     }
+
+    //public Enemy(_position, _texture)
+    //{
+        
+    //}
 }
