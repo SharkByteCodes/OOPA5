@@ -22,10 +22,12 @@ public class Game1 : Game
     
 
     private Random _rng;
-    public Texture2D _starRound;
+    private Texture2D _starRound;
     private Star _star;
-    //private Texture2D _star;
-
+    
+    
+    private Texture2D _stationC;
+    private Station _station;
 
     // init player / receptacle
     //Player _player;
@@ -43,7 +45,7 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 800;
         _graphics.PreferredBackBufferHeight = 800;
         _graphics.ApplyChanges();
-        
+        // Would be nice
         
         
         Content.RootDirectory = "Content";
@@ -71,6 +73,9 @@ public class Game1 : Game
         
         _starRound = Content.Load<Texture2D>("sprites/stars/starRound");
         _star = new Star(_starRound);
+        _stationC = Content.Load<Texture2D>("sprites/station/station_C");
+        _station = new Station(_stationC);
+        
         //_player = new Player();
         Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("sprites/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
@@ -95,7 +100,11 @@ public class Game1 : Game
 
         
         Console.WriteLine("Stars Count: " + _star.GetNumbStars()); // debug info
-        _star.Draw(_spriteBatch);
+        _star.Draw(_spriteBatch); // draw background stars
+        
+        _station.Draw(_spriteBatch); // Draw space station
+        
+        
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);

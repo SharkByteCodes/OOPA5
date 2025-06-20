@@ -42,5 +42,5 @@ there should be 2 classes of ammo with a unique name
 - Environment.cs: should be the basis of forming the game's bounding box,
   - Stars.cs could be a subclass, as stars are part of the environment
 
-
+In time constraints, enemies may not move toward space station but destroyable on click.
 More to follow

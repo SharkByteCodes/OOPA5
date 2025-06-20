@@ -3,15 +3,16 @@
  * This is purely to add aesthetic and I don't believe adds to the graded material?
  */
 
+//using System;
+
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
 namespace OOPA5;
 
-public class Star
+public class Star //: Objects
 {
     
     // A bunch of lists, this is adopted from goblin dance party
@@ -22,6 +23,7 @@ public class Star
     private List<float> _starSize; // star scale
     
     private Random _rng; // Random number generator for stars
+    
     
     private readonly Texture2D _starRound; //_starPent is originally starSprite (might not be used)
 
@@ -35,7 +37,7 @@ public class Star
         _starRotation = new List<float>(); // list for rotation
         _starSize = new List<float>(); // list for size
         
-        // So it appears the above commands needed to be part of the Star Object.
+        // So it appears the above commands needed to be part of the Star Object. It took way to long to get this working.
         
         // for loops for the above lists
 
