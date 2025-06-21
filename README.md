@@ -42,6 +42,7 @@ there should be 2 classes of ammo with a unique name~~ Spinning Rim, not require
 - BaddieShip.cs: subclass of Enemy. As the name implies, foreign/hostile ships on collision course
 - Environment.cs: should be the basis of forming the game's bounding box,
   - Stars.cs ~~could be a subclass, as stars are part of the environment~~ are it's own class. Emeny inheritance/polymorphism should be enough.
+  - Object Class to start weilding this new inheritance power
 
 In time constraints:
 - enemies may not move toward space station but destroyable on click.
