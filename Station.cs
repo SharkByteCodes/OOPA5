@@ -2,11 +2,6 @@
  * This is the space station that needs to be defended
  */
 
-using System;
-using System.Runtime.InteropServices.JavaScript;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-
 namespace OOPA5;
 
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Input;
 
 /* Object-Oriented programming Assingment 5
  * The Final Boss Battle
@@ -28,6 +24,9 @@ public class Game1 : Game
     
     private Texture2D _stationC;
     private Station _station;
+    
+    private EnemyShip _enemyShip;
+    private Texture2D _enemyShipTexture;
 
     // init player / receptacle
     //Player _player;
@@ -45,7 +44,6 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 800;
         _graphics.PreferredBackBufferHeight = 800;
         _graphics.ApplyChanges();
-        // Would be nice
         
         
         Content.RootDirectory = "Content";
@@ -76,7 +74,10 @@ public class Game1 : Game
         _stationC = Content.Load<Texture2D>("sprites/station/station_C");
         _station = new Station(_stationC);
         
-        //_player = new Player();
+        // Enemies!
+        _enemyShipTexture = Content.Load<Texture2D>("sprites/enemy/enemy_B");
+        _enemyShip = new EnemyShip(_enemyShipTexture, new Vector2(250,250), false); //polymorphism is broken here.
+        
         Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("sprites/player/fireReceptacle"), 0, 0));
         // TODO: use this.Content to load your game content here
     }
@@ -86,7 +87,7 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-
+        
         // TODO: Add your update logic here
 
         
@@ -104,6 +105,8 @@ public class Game1 : Game
         
         _station.Draw(_spriteBatch); // Draw space station
         
+        // Draw an enemy
+        _enemyShip.Draw(_spriteBatch);
         
         // TODO: Add your drawing code here
 

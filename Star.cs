@@ -5,11 +5,6 @@
 
 //using System;
 
-using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-
 namespace OOPA5;
 
 public class Star : Objects
@@ -47,7 +42,7 @@ public class Star : Objects
 
         for (int i = 0; i < _numStars; i++)
         {
-            _starX.Add(_rng.Next(25, 750));
+            _starX.Add(_rng.Next(25, 750)); //it's not broken, don't fix (refactor) today.
             _starY.Add(_rng.Next(25, 750));
             _starRotation.Add(_rng.NextSingle());
             _starSize.Add(_rng.Next(25, 50) / 200f);
