@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace OOPA5;
 
-public class Enemy
+public class Enemy : Objects
 {
     private Vector2 _position;
     private Texture2D _texture;

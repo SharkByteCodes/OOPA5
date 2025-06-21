@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace OOPA5;
 
-public class Star //: Objects
+public class Star : Objects
 {
     
     // A bunch of lists, this is adopted from goblin dance party
@@ -27,6 +27,9 @@ public class Star //: Objects
     
     private readonly Texture2D _starRound; //_starPent is originally starSprite (might not be used)
 
+    
+    
+    
     public Star(Texture2D starRound) // constructor to call textur from Game1.cs :) Credit: https://youtu.be/-Q2h5HGi0fI?t=564
     {
         _starRound = starRound;
@@ -40,6 +43,7 @@ public class Star //: Objects
         // So it appears the above commands needed to be part of the Star Object. It took way to long to get this working.
         
         // for loops for the above lists
+             
 
         for (int i = 0; i < _numStars; i++)
         {

@@ -27,21 +27,25 @@ Anyway, a basic prototype would include the following
 * polymorphic objects will be enemies. parent (superclass) objects will be a default class for meteors, monsters, ships. each will have their own unique "heath", as in how many damage points (aka hit points / HP) it can take before it's destroyed, and how many damage points (aka attack points AP) that is dealt to the space station for every second the enemy is colliding with the station. something (do be determined) will be inherited from the superclass
 * a use of collection/list can be a list of different ammo the player has acquired and can cycle through them.
 * Monogame already tracks mouse movement and can drag sprites. auto-tracking the receptacle should be simple enough.
-* Bonus feature with object pooling can the ammunition for the player (bullet-hell)
+* Bonus feature with object pooling can the ammunition for the player (bullet-hell), another day.
 
 basic layout of classes (subject to change):
 
-- Counter.cs: this will be a score keeping system (this will likely change)
-- Player.cs: this will be "everything" related to the player, such as ammo count, ammo type, receptacle data, and so on.
-- Ammo.cs: this defines all the different types of ammo (No less than 2 as proof of concept)
-there should be 2 classes of ammo with a unique name
+- ~~Counter.cs: this will be a score keeping system (this will likely change)~~ Spinning Rim, not included
+- ~~Player.cs: this will be "everything" related to the player, such as ammo count, ammo type, receptacle data, and so on.~~ Spinning Rim, not required
+- ~~Ammo.cs: this defines all the different types of ammo (No less than 2 as proof of concept)
+there should be 2 classes of ammo with a unique name~~ Spinning Rim, not required.
 - Station.cs: this will be the object the player defends
 - Enemy.cs: parent class of enemies
 - Meteor.cs: subclass of Enemy
 - Monster.cs subclass of Enemy
 - BaddieShip.cs: subclass of Enemy. As the name implies, foreign/hostile ships on collision course
 - Environment.cs: should be the basis of forming the game's bounding box,
-  - Stars.cs could be a subclass, as stars are part of the environment
+  - Stars.cs ~~could be a subclass, as stars are part of the environment~~ are it's own class. Emeny inheritance/polymorphism should be enough.
 
-In time constraints, enemies may not move toward space station but destroyable on click.
+In time constraints:
+- enemies may not move toward space station but destroyable on click.
+- Enemies and station may overlap at spawn, causing issues.
+- Collisions were ideal but not required.
+- 
 More to follow

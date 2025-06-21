@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace OOPA5;
 
 
-public class Station //: Objects
+public class Station : Objects
 {
     
     
@@ -19,14 +19,15 @@ public class Station //: Objects
     
     private int _stationX;
     private int _stationY;
+    private Vector2 _position;
     
     public Station(Texture2D _stationC)
         {
         _station = _stationC;
-        _rng = new Random();
-        _stationX = _rng.Next(25, 750);
-        _stationY = _rng.Next(25, 750);
-
+        //_rng = new Random();
+        //_stationX = _rng.Next(50, 700);
+        //_stationY = _rng.Next(50, 700);
+        _position = new Vector2(ObjectPosition().X, ObjectPosition().Y);
         }
 
 
@@ -34,7 +35,8 @@ public class Station //: Objects
     public void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Begin();
-        spriteBatch.Draw(_station, new Vector2(_stationX,_stationY), Color.Violet);
+        spriteBatch.Draw(_station, _position, Color.Violet);
         spriteBatch.End();
     }
+    
 }

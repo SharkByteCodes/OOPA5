@@ -1,10 +1,32 @@
-using System;
+/*
+ * Well, how 'bout that. The inheritance is working!!
+ * First example of working inheritance is calling the random object position generation for the space station.
+ *
+ */
 
+using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace OOPA5;
 
 public class Objects
 {
-    public Random Rng;
     
+    // some variables
+    
+    private Vector2 _position;
+    
+    public Random _rng;
+    
+    public Objects()
+        {
+        _rng = new Random();
+        _position = new Vector2(_rng.Next(50, 700), _rng.Next(50, 700));
+        
+        }
+    
+    
+    // accessors
+    public Vector2 ObjectPosition() {return _position;}
 }
